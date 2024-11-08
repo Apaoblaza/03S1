@@ -15,13 +15,22 @@
         <div class="card">
             <div class="img-card"></div>
               <h6>Laptop Gamer AMD</h6>
-              <p>Precio base: $<span class="precio-inicial"></span> </p>
+              <p>Precio unitario: $<span class="precio-inicial"></span> </p>
         
               <p>Cantidad:
                 <span class="cantidad">0</span>
-                <button 
+                <button id="upbutton" onclick="
+                    qty++;
+                    valortotal = precio * qty;
+                    cantidadSpan.innerHTML = qty;
+                    valorTotalSpan.innerHTML = valortotal;"
                 >+</button>
-                <button
+                <button id="downbutton" onclick="
+                    qty--;
+                    valortotal = precio * qty;
+                    cantidadSpan.innerHTML = qty;
+                    valorTotalSpan.innerHTML = valortotal;
+                    valortotal = precio;"
                 >-</button>
               </p>
             </div>
